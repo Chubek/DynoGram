@@ -23,3 +23,5 @@ dynogram -f file.fasta -o peps.fasta
 ```
 cat file.fasta | dynogram
 ```
+
+Dedicated to: The Late Dr. Kevin Moran of Oxford University

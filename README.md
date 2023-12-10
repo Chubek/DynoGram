@@ -1,14 +1,13 @@
 # Dynogram: Nucleotide to Peptide Translator, using Lex and Yacc
 
-This software translates nucleotides to peptides using lex and yacc. 
+This software translates nucleotides to peptides using lex. 
 
 Run make to build. You need:
 
 * `eperl` or Embedded Perl (sudo apt-get install eperl)
-* `yacc` or `bison` (sudo apt-get install bison)
 * `lex` or `flex` (sudo apt-get install flex)
 
-Parameters:
+Parameters (after you have compiled it):
 
 * `-f` : Input file (default: stdin, if stdin is a valid file descriptor)
 * `-o` : Output file  (default: stdout)
@@ -17,11 +16,11 @@ Parameters:
 Examples:
 
 ```
-dynogram -f file.fasta -o peps.fasta
+dynogram -f sample.fa -o peps.fa
 ```
 
 ```
-cat file.fasta | dynogram
+cat sample.fa | dynogram
 ```
 
 Dedicated to: The Late Dr. Kevin Moran of Oxford University

@@ -1,17 +1,11 @@
-dynogram: y.tab.c
-	cc $(DEBUG) -o dynogram y.tab.c -ll
-
-y.tab.c: lex.yy.c
-	yacc dynogram.gen.y
+dynogram: lex.yy.c
+	cc $(DEBUG) -o dynogram lex.yy.c -ll
 
 lex.yy.c: dynogram.gen.l
 	lex dynogram.gen.l
 
-dynogram.gen.l: dynogram.gen.y
+dynogram.gen.l: clean
 	eperl dynogram.l > dynogram.gen.l
-
-dynogram.gen.y: clean
-	eperl dynogram.y > dynogram.gen.y
 
 
 .PHONY : clean
